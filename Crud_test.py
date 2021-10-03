@@ -53,5 +53,6 @@ if option == 'create':
 
 if option == 'read':
     a.read(input('ID: '))
+    print(personalisation[personalisation.index[a.ID_read]].name)
         
     
