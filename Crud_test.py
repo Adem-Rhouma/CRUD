@@ -13,22 +13,13 @@ class person():
         self.name = name
         self.last_name = last_name
         self.ID = ID
-        while name[0].upper() != name[0] or last_name[0].upper() != last_name[0]:
-            print("Invalid name: first letter needs to be an upper letter")
-            a.create(input('Name: '), input("last name: "), 321)
-        print(ID)
-        print(a.create)
-        personalisation.append(a.create)
-        print(personalisation[0].name)
         
         
 
     def read(self, ID_read):
         self.ID_read=ID_read
         print(personalisation[0].ID)
-        b=personalisation.index(ID_read)
-        print('test')
-        print(b)
+        print(personalisation[personalisation.index(ID_read)])
 
 
 
@@ -51,7 +42,13 @@ while x in xlist:
     x=random.randint(10000000, 99999999)
 xlist.append(x)
 if option == 'create':
-    a.create(input('name: '), input('last name: '), 321)
+    a.create(input('name: '), input('last name: '), x)
+    while a.name[0].upper() != a.name[0] or a.last_name[0].upper() != a.last_name[0]:
+        print("Invalid name: first letter needs to be an upper letter")
+        a.create(input('Name: '), input("last name: "), x)
+    print(a.ID)
+    personalisation.append(a)
+    print(personalisation[0].name)
     option=input('would u like to create or read or update or delete: ')
 
 if option == 'read':
